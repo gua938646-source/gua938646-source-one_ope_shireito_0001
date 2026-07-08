@@ -148,10 +148,11 @@ function SetupScreen({
             type="time"
             value={bedtime}
             onChange={(e) => setBedtime(e.target.value)}
-            className="w-full bg-muted rounded-xl px-4 py-3 text-foreground outline-none focus:ring-primary text-lg font-black text-center box-border"
+            className="w-full bg-muted rounded-xl px-4 py-3 text-foreground outline-none focus:ring-2 focus:ring-primary text-lg font-black text-center box-border"
           />
         </div>
       </div>
+
 
       <button
         onClick={onNext}
