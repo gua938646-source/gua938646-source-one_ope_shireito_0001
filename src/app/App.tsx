@@ -163,8 +163,7 @@ function SetupScreen({
       </button>
       <div className="mt-6">
         {/*     <AdBanner slot="banner" /> */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5268784818116045"
-     crossorigin="anonymous"></script>
+        <meta name="google-adsense-account" content="ca-pub-5268784818116045">
       </div>
     </div>
   );
@@ -628,8 +627,7 @@ function CompleteScreen({
 
       <div className="w-full mb-6">
          {/*     <AdBanner slot="banner" /> */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5268784818116045"
-     crossorigin="anonymous"></script>
+       <meta name="google-adsense-account" content="ca-pub-5268784818116045">
       </div>
 
       <button
