@@ -148,7 +148,7 @@ function SetupScreen({
             type="time"
             value={bedtime}
             onChange={(e) => setBedtime(e.target.value)}
-            className="w-full bg-muted rounded-xl px-4 py-3 text-foreground outline-none focus:ring-2 focus:ring-primary text-xl font-black text-center"
+            className="w-full bg-muted rounded-xl px-4 py-3 text-foreground outline-none focus:ring-2 focus:ring-primary text-lg font-black text-center box-border"
           />
         </div>
       </div>
@@ -270,20 +270,20 @@ function MissionSelectScreen({
       {/* Add new mission */}
       <div className="bg-card rounded-2xl border border-border p-4 mb-4">
         <p className="text-xs font-bold text-muted-foreground mb-3">ミッションを追加</p>
-        <div className="flex gap-2 mb-2">
+        <div className="flex gap-2 mb-2 w-full overflow-hidden">
           <input
             type="text"
             value={newLabel}
             onChange={(e) => setNewLabel(e.target.value)}
             placeholder="ミッション名"
-            className="flex-1 bg-muted rounded-xl px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:ring-2 focus:ring-primary"
+            className="min-w-0 flex-1 bg-muted rounded-xl px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:ring-2 focus:ring-primary"
           />
-          <div className="flex items-center gap-1 bg-muted rounded-xl px-3">
+          <div className="flex items-center gap-1 bg-muted rounded-xl px-2 flex-shrink-0 w-20">
             <input
               type="number"
               value={newPoints}
               onChange={(e) => setNewPoints(Number(e.target.value))}
-              className="w-12 bg-transparent text-sm font-bold text-primary outline-none text-center"
+              className="w-10 bg-transparent text-sm font-bold text-primary outline-none text-center"
               min={1}
               max={99}
             />
@@ -305,20 +305,20 @@ function MissionSelectScreen({
           <Zap size={16} className="text-accent" />
           <p className="text-sm font-black text-accent">スペシャルミッションを設定</p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 w-full overflow-hidden">
           <input
             type="text"
             value={emergencyLabel}
             onChange={(e) => setEmergencyLabel(e.target.value)}
             placeholder="例：いま、おふろにはいる🛀"
-            className="flex-1 bg-white rounded-xl px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:ring-2 focus:ring-accent border border-accent/20"
+            className="min-w-0 flex-1 bg-white rounded-xl px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:ring-2 focus:ring-accent border border-accent/20"
           />
-          <div className="flex items-center gap-1 bg-white rounded-xl px-3 border border-accent/20">
+          <div className="flex items-center gap-1 bg-white rounded-xl px-2 border border-accent/20 flex-shrink-0 w-20">
             <input
               type="number"
               value={emergencyPoints}
               onChange={(e) => setEmergencyPoints(Number(e.target.value))}
-              className="w-12 bg-transparent text-sm font-bold text-accent outline-none text-center"
+              className="w-10 bg-transparent text-sm font-bold text-accent outline-none text-center"
               min={1}
               max={99}
             />
@@ -560,13 +560,22 @@ function CompleteScreen({
   const target = new Date(finishedAt);
   target.setHours(bh, bm, 0, 0);
   const diffMin = Math.round((finishedAt.getTime() - target.getTime()) / 60000);
-
+  const fmtDiff = (min: number) => {
+    const abs = Math.abs(min);
+    if (abs >= 60) {
+      const h = Math.floor(abs / 60);
+      const m = abs % 60;
+      return m > 0 ? `${h}時間${m}分` : `${h}時間`;
+    }
+    return `${abs}分`;
+  };
+  
   const earlyLate =
     diffMin < 0
-      ? { text: `よていより ${Math.abs(diffMin)} 分はやいね！🎉`, color: "text-green-600", bg: "bg-green-50 border-green-200" }
+      ? { text: `よていより ${fmtDiff(diffMin)} はやいね！🎉`, color: "text-green-600", bg: "bg-green-50 border-green-200" }
       : diffMin === 0
       ? { text: "ぴったり！すごい！🌟", color: "text-primary", bg: "bg-orange-50 border-orange-200" }
-      : { text: `よていより ${diffMin} 分おくれたよ`, color: "text-red-500", bg: "bg-red-50 border-red-200" };
+    　: { text: `よていより ${fmtDiff(diffMin)} おくれたよ`, color: "text-red-500", bg: "bg-red-50 border-red-200" };
 
   return (
     <div className="flex flex-col min-h-screen px-6 py-12 items-center justify-center text-center">
