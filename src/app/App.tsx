@@ -136,7 +136,7 @@ function SetupScreen({
             value={nickname}
             onChange={(e) => setNickname(e.target.value)}
             placeholder="ニックネーム"
-            className="w-full bg-muted rounded-xl px-4 py-3 text-foreground placeholder:text-muted-foreground outline-none focus:ring-2 focus:ring-primary text-lg font-bold"
+            className="w-full bg-muted rounded-xl px-2 md:px-4 py-3 text-foreground outline-none focus:ring-2 focus:ring-primary text-lg font-bold box-border"
           />
         </div>
 
