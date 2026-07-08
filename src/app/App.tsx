@@ -162,7 +162,9 @@ function SetupScreen({
         つぎへ ✨
       </button>
       <div className="mt-6">
-        <AdBanner slot="banner" />
+        {/*     <AdBanner slot="banner" /> */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5268784818116045"
+     crossorigin="anonymous"></script>
       </div>
     </div>
   );
@@ -625,7 +627,9 @@ function CompleteScreen({
       </div>
 
       <div className="w-full mb-6">
-        <AdBanner slot="rectangle" />
+         {/*     <AdBanner slot="banner" /> */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5268784818116045"
+     crossorigin="anonymous"></script>
       </div>
 
       <button
