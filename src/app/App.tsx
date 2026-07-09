@@ -119,7 +119,7 @@ function SetupScreen({
   onNext: () => void;
 }) {
   return (
-    <div className="flex flex-col h-screen w-full overflow-hidden">
+    <div className="flex flex-col min-h-screen px-6 py-12">
       <div className="flex flex-col items-center mb-10">
         <div className="text-6xl mb-3">🌙</div>
         <h1 className="text-3xl font-black text-primary tracking-tight">おやすみミッション</h1>
