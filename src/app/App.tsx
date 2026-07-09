@@ -676,98 +676,77 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-background" style={{ fontFamily: "'M PLUS Rounded 1c', sans-serif" }}>
-      <StarsBg />
-      <div className="relative z-10 max-w-sm mx-auto min-h-screen">
-        {screen === "setup" && (
-          <SetupScreen
-            nickname={nickname} setNickname={setNickname}
-            bedtime={bedtime} setBedtime={setBedtime}
-            onNext={() => setScreen("missionSelect")}
-          />
-        )}
-        {screen === "missionSelect" && (
-          <MissionSelectScreen
-            missions={missions}
-            setMissions={setMissions}
-            totalPoints={totalPoints}
-            onNext={() => setScreen("mission")}
-            emergencyLabel={emergencyLabel}
-            setEmergencyLabel={setEmergencyLabel}
-            emergencyPoints={emergencyPoints}
-            setEmergencyPoints={setEmergencyPoints}
-          />
-        )}
-        {screen === "mission" && (
-          <MissionScreen
-            nickname={nickname}
-            missions={selectedMissions}
-            todayPoints={todayPoints}
-            totalPoints={totalPoints}
-            completeItem={completeItem}
-            onFix={handleFix}
-            emergencyLabel={emergencyLabel}
-            emergencyPoints={emergencyPoints}
-            bedtime={bedtime}
-          />
-        )}
-        {screen === "complete" && (
-          <CompleteScreen
-            nickname={nickname}
-            todayPoints={todayPoints}
-            totalPoints={totalPoints}
-            onReset={handleReset}
-            bedtime={bedtime}
-            finishedAt={finishedAt}
-          />
-        )}
-      </div>
+  <div className="min-h-screen bg-background" style={{ fontFamily: "'M PLUS Rounded 1c', sans-serif" }}>
+    <StarsBg />
+
+    <div className="relative z-10 max-w-sm mx-auto min-h-screen">
+      {screen === "setup" && (
+        <SetupScreen
+          nickname={nickname}
+          setNickname={setNickname}
+          bedtime={bedtime}
+          setBedtime={setBedtime}
+          onNext={() => setScreen("missionSelect")}
+        />
+      )}
+
+      {screen === "missionSelect" && (
+        <MissionSelectScreen
+          missions={missions}
+          setMissions={setMissions}
+          totalPoints={totalPoints}
+          onNext={() => setScreen("mission")}
+          emergencyLabel={emergencyLabel}
+          setEmergencyLabel={setEmergencyLabel}
+          emergencyPoints={emergencyPoints}
+          setEmergencyPoints={setEmergencyPoints}
+        />
+      )}
+
+      {screen === "mission" && (
+        <MissionScreen
+          nickname={nickname}
+          missions={selectedMissions}
+          todayPoints={todayPoints}
+          totalPoints={totalPoints}
+          completeItem={completeItem}
+          onFix={handleFix}
+          emergencyLabel={emergencyLabel}
+          emergencyPoints={emergencyPoints}
+          bedtime={bedtime}
+        />
+      )}
+
+      {screen === "complete" && (
+        <CompleteScreen
+          nickname={nickname}
+          todayPoints={todayPoints}
+          totalPoints={totalPoints}
+          onReset={handleReset}
+          bedtime={bedtime}
+          finishedAt={finishedAt}
+        />
+      )}
+
+      {/* フッターここ！ */}
+      <footer className="mt-2 border-t pt-2 pb-2 text-center text-[10px] text-gray-400">
+        <a href="https://bread-ear.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="mx-1 hover:underline">
+          プライバシーポリシー
+        </a>
+        <span>｜</span>
+        <a href="https://bread-ear.com/terms/" target="_blank" rel="noopener noreferrer" className="mx-1 hover:underline">
+          利用規約
+        </a>
+        <span>｜</span>
+        <a href="https://bread-ear.com/contact/" target="_blank" rel="noopener noreferrer" className="mx-1 hover:underline">
+          お問い合わせ
+        </a>
+        <span>｜</span>
+        <a href="https://bread-ear.com/profile/" target="_blank" rel="noopener noreferrer" className="mx-1 hover:underline">
+          運営者情報
+        </a>
+      </footer>
+
     </div>
-    
-{/*以下　ブログページと連携*/}
-<footer className="mt-2 border-t pt-2 pb-2 text-center text-[10px] text-gray-400">
-  <a
-    href="https://bread-ear.com/privacy-policy/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="mx-1 hover:underline"
-  >
-    プライバシーポリシー
-  </a>
-  <span>｜</span>
-
-  <a
-    href="https://bread-ear.com/terms/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="mx-1 hover:underline"
-  >
-    利用規約
-  </a>
-  <span>｜</span>
-
-  <a
-    href="https://bread-ear.com/contact/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="mx-1 hover:underline"
-  >
-    お問い合わせ
-  </a>
-  <span>｜</span>
-
-  <a
-    href="https://bread-ear.com/profile/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="mx-1 hover:underline"
-  >
-    運営者情報
-  </a>
-</footer>
-      {/*ここまで↑*/}
-        
-
-  );
-}
-        
+  </div>
+);
