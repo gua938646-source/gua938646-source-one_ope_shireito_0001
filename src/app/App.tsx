@@ -721,10 +721,6 @@ export default function App() {
             finishedAt={finishedAt}
           />
         )}
-      </div>
-    </div>
-  );
-}
 
 
 {/*以下　ブログページと連携*/}
@@ -765,3 +761,10 @@ export default function App() {
     運営者情報
   </a>
 </footer>
+{/*ここまで↑*/}
+        
+      </div>
+    </div>
+  );
+}
+        
