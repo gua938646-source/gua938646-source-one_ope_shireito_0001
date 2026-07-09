@@ -729,7 +729,7 @@ export default function App() {
       )}
 
       {/* フッターここ！ */}
-    　<footer className="mt-2 border-t pt-2 pb-2 text-center text-[10px] text-gray-400">
+    　<footer className="bg-red-500 text-white p-10">
   <a
     href="https://bread-ear.com/privacy-policy/"
     target="_blank"
