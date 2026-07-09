@@ -729,7 +729,7 @@ export default function App() {
     rel="noopener noreferrer"
     className="mx-2 hover:underline"
   >
-    プライバシーポリシー
+    {'プライバシーポリシー'}
   </a>
 
   <a
@@ -738,7 +738,7 @@ export default function App() {
     rel="noopener noreferrer"
     className="mx-2 hover:underline"
   >
-    利用規約
+    {'利用規約'}
   </a>
 
   <a
@@ -747,7 +747,7 @@ export default function App() {
     rel="noopener noreferrer"
     className="mx-2 hover:underline"
   >
-    お問い合わせ
+    {'お問い合わせ'}
   </a>
 
   <a
@@ -756,7 +756,7 @@ export default function App() {
     rel="noopener noreferrer"
     className="mx-2 hover:underline"
   >
-    運営者情報
+    {'運営者情報'}
   </a>
 </footer>
         
