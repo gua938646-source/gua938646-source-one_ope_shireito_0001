@@ -677,6 +677,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-background" style={{ fontFamily: "'M PLUS Rounded 1c', sans-serif" }}>
+      {/*     <div className="min-h-screen bg-background" style={{ fontFamily: "'M PLUS Rounded 1c', sans-serif" }}>*/}
       <StarsBg />
       <div className="relative z-10 max-w-sm mx-auto min-h-screen">
         {screen === "setup" && (
@@ -724,7 +725,7 @@ export default function App() {
       </div>
 
 {/*以下　ブログページと連携*/}
-<footer className="mt-8 border-t pt-4 text-center text-sm text-gray-500">
+<footer className="mt-8 border-t pt-4 text-center text-xs text-gray-500">
   <a
     href="https://bread-ear.com/privacy-policy/"
     target="_blank"
