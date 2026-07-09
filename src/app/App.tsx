@@ -729,8 +729,7 @@ export default function App() {
       )}
 
       {/* フッターここ！ */}
-          {/*<footer className="mt-2 border-t pt-2 pb-2 text-center text-[10px] text-gray-400　*/}
-        <footer className="bg-red-300 text-black mt-2 border-t pt-2 pb-2 text-center text-[10px]">
+    　<footer className="mt-2 border-t pt-2 pb-2 text-center text-[10px] text-gray-400">
         <a href="https://bread-ear.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="mx-1 hover:underline">
           プライバシーポリシー
         </a>
