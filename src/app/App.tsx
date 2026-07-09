@@ -722,7 +722,7 @@ export default function App() {
           />
         )}
 
-<footer className="mt-8 border-t pt-4 text-center text-sm text-gray-500">
+<footer className="absolute bottom-2 left-0 right-0 border-t pt-4 text-center text-sm text-gray-500">
   <a
     href="https://bread-ear.com/privacy-policy/"
     target="_blank"
@@ -756,7 +756,7 @@ export default function App() {
     rel="noopener noreferrer"
     className="mx-2 hover:underline"
   >
-    {'運営者情報'}
+    {'運営者'}
   </a>
 </footer>
         
