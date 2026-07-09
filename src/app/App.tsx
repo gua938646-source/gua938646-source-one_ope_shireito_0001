@@ -721,6 +721,11 @@ export default function App() {
             finishedAt={finishedAt}
           />
         )}
+
+<footer>
+  テストフッター
+</footer>
+        
       </div>
     </div>
   );
