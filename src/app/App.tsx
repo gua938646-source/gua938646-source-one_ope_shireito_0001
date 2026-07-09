@@ -721,7 +721,7 @@ export default function App() {
             finishedAt={finishedAt}
           />
         )}
-
+      </div>
 
 {/*以下　ブログページと連携*/}
 <footer className="mt-8 border-t pt-4 text-center text-sm text-gray-500">
@@ -763,7 +763,7 @@ export default function App() {
 </footer>
 {/*ここまで↑*/}
         
-      </div>
+
     </div>
   );
 }
