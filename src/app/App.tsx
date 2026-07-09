@@ -8,8 +8,13 @@ function AdBanner({ slot = "rectangle" }: { slot?: "banner" | "rectangle" }) {
       <div className="w-full rounded-2xl overflow-hidden border border-dashed border-border bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col items-center justify-center gap-1 text-gray-400" style={{ minHeight: 100 }}>
         <span className="text-[10px] font-bold tracking-widest uppercase">広告</span>
         {/* ここに Google AdSense や他の広告タグを貼る */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5268784818116045"
-     crossorigin="anonymous"></script>
+      <ins 
+          className="adsbygoogle"
+          style={{ display: 'block' }}
+          data-ad-client="ca-pub-5268784818116045" // あなたのID
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
         {/* <ins className="adsbygoogle" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" /> */}
         <span className="text-[10px] text-gray-300">300 × 100</span>
       </div>
