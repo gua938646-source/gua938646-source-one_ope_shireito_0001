@@ -727,7 +727,7 @@ export default function App() {
           finishedAt={finishedAt}
         />
       )}
-    </div>
+
     
       {/* フッターここ！ */}
  <footer className="mt-8 border-t pt-4 text-center text-sm text-gray-500">
@@ -768,6 +768,6 @@ export default function App() {
   </a>
 </footer>
 
-
+    </div>
   </div>
 );
