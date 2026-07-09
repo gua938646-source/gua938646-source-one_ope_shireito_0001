@@ -725,3 +725,43 @@ export default function App() {
     </div>
   );
 }
+
+
+{/*以下　ブログページと連携*/}
+<footer className="mt-8 border-t pt-4 text-center text-sm text-gray-500">
+  <a
+    href="https://bread-ear.com/privacy-policy/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mx-2 hover:underline"
+  >
+    プライバシーポリシー
+  </a>
+
+  <a
+    href="https://bread-ear.com/terms/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mx-2 hover:underline"
+  >
+    利用規約
+  </a>
+
+  <a
+    href="https://bread-ear.com/contact/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mx-2 hover:underline"
+  >
+    お問い合わせ
+  </a>
+
+  <a
+    href="https://bread-ear.com/profile/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mx-2 hover:underline"
+  >
+    運営者情報
+  </a>
+</footer>
