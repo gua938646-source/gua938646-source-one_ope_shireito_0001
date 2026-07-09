@@ -676,7 +676,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-background" style={{ fontFamily: "'M PLUS Rounded 1c', sans-serif" }}>
+    <div className="h-screen bg-background" style={{ fontFamily: "'M PLUS Rounded 1c', sans-serif" }}>
       {/*     <div className="min-h-screen bg-background" style={{ fontFamily: "'M PLUS Rounded 1c', sans-serif" }}>*/}
       <StarsBg />
       <div className="relative z-10 max-w-sm mx-auto min-h-screen">
