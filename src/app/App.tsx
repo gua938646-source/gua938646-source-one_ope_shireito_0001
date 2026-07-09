@@ -758,6 +758,7 @@ export default function App() {
   >
     運営者情報
   </a>
+</footer>
         
       </div>
     </div>
